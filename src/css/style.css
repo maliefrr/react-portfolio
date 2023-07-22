@@ -1,0 +1,79 @@
+body {
+    background-color: #212429;
+    color: antiquewhite;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around; /* Spread the logo and hamburger button */
+    align-items: center;
+    padding: 10px; /* Add some padding for better spacing */
+  }
+  
+  .navbar h3 {
+    margin: 0; /* Remove any margin from the logo */
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    list-style: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .navbar ul li {
+    text-decoration: none;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: antiquewhite;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Add styles for the sidebar */
+  .menu-wrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Start with the sidebar offscreen on small screens */
+    bottom: 0;
+    width: 200px; /* Set the width of the sidebar */
+    background-color: #1a1c20; /* Set the background color of the sidebar */
+    transition: right 0.3s ease;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make the menu take up the entire width of the sidebar */
+  }
+  
+  .menu.open {
+    right: 0; /* Move the sidebar into view when open */
+  }
+  
+  /* Adjust media query to toggle the sidebar correctly */
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    /* Since the menu items are inside the wrapper, the wrapper needs to be flex and not the menu */
+    .menu-wrapper.open {
+      right: 0;
+    }
+  }
+  
