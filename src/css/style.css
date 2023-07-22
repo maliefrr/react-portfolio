@@ -1,79 +1,138 @@
 body {
-    background-color: #212429;
-    color: antiquewhite;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-around; /* Spread the logo and hamburger button */
-    align-items: center;
-    padding: 10px; /* Add some padding for better spacing */
-  }
-  
-  .navbar h3 {
-    margin: 0; /* Remove any margin from the logo */
-  }
-  
+  background-color: #212429;
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar h3 {
+  margin: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: antiquewhite;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-wrapper {
+  width: 50vw;
+}
+
+.menu-wrapper ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.menu-wrapper ul li:last-child button {
+  background-color: #e44309;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+/* Adjust media query to toggle the sidebar correctly */
+@media (max-width: 768px) {
   .navbar ul {
-    display: flex;
-    justify-content: space-around;
-    width: 50vw;
-    list-style: none;
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-  }
-  
-  .navbar ul li {
-    text-decoration: none;
-  }
-  
-  .hamburger {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: antiquewhite;
-    cursor: pointer;
     display: none;
   }
-  
-  /* Add styles for the sidebar */
-  .menu-wrapper {
-    display: flex;
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Show the menu in full-screen overlay */
+  .bm-menu-wrap {
     position: fixed;
     top: 0;
-    right: -200px; /* Start with the sidebar offscreen on small screens */
-    bottom: 0;
-    width: 200px; /* Set the width of the sidebar */
-    background-color: #1a1c20; /* Set the background color of the sidebar */
-    transition: right 0.3s ease;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
   }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; /* Make the menu take up the entire width of the sidebar */
+
+  .bm-menu {
+    background-color: #212429;
+    padding: 2.5em 1.5em;
   }
-  
-  .menu.open {
-    right: 0; /* Move the sidebar into view when open */
+
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
   }
-  
-  /* Adjust media query to toggle the sidebar correctly */
-  @media (max-width: 768px) {
-    .navbar ul {
-      display: none;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  
-    /* Since the menu items are inside the wrapper, the wrapper needs to be flex and not the menu */
-    .menu-wrapper.open {
-      right: 0;
-    }
+
+  .bm-cross {
+    background: #bdc3c7;
   }
-  
+
+  .bm-menu.open {
+    transform: translateX(0);
+  }
+
+  .bm-burger-button {
+    display: none;
+  }
+
+  .bm-item-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bm-item {
+    margin-bottom: 20px;
+  }
+
+  /* Styling for the "Download CV" button */
+  .bm-item:last-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bm-item:last-child button {
+    background-color: #e44309;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .bm-menu.open .hamburger {
+    display: none;
+  }
+
+  .bm-menu.open .hamburger-inside-sidebar {
+    display: flex;
+  }
+  .menu-wrapper {
+    display: none;
+  }
+}

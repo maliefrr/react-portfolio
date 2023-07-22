@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { slide as Menu } from 'react-burger-menu'
 import { Twirl as Hamburger } from 'hamburger-react'
 import "./css/style.css";
 
@@ -11,14 +12,14 @@ const App = () => {
 
   return (
     <>
-        <nav className="navbar">
+<nav className="navbar">
             <h3>Tomato</h3>
-            <div className="hamburger">
-            <Hamburger duration={0.4} onToggle={toggleMenu} />
+            <div className="hamburger" onClick={toggleMenu}>
+            <Hamburger duration={0.4} toggled={isMenuOpen}/>
             </div>
             {/* Add the menu items */}
             <div className="menu-wrapper">
-            <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
+            <ul>
             <li>Home</li>
             <li>About</li>
             <li>Skills</li>
@@ -29,6 +30,18 @@ const App = () => {
             </ul>
             </div>
         </nav>
+      {/* Add the menu items */}
+      <Menu right isOpen={isMenuOpen} width={`100%`} customBurgerIcon={false} onClose={toggleMenu}>
+        <ul className="menu">
+          <li>Home</li>
+          <li>About</li>
+          <li>Skills</li>
+          <li>Project</li>
+          <li>
+            <button>Download CV</button>
+          </li>
+        </ul>
+      </Menu>
     </>
   );
 };
