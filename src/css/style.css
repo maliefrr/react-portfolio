@@ -52,6 +52,24 @@ body {
 .menu-wrapper ul li a {
   text-decoration: none;
   color: inherit;
+  position: relative; /* Added to enable positioning of the ::before pseudo-element */
+}
+
+/* Create the line before the link text */
+.menu-wrapper ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust this value to control the distance of the line from the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e44309;
+  transition: width 0.3s ease-in; /* Adjust the transition timing as desired */
+}
+
+/* Animate the line from left to right on hover */
+.menu-wrapper ul li a:hover::before {
+  width: 100%;
 }
 
 .menu-wrapper ul li:last-child button {
