@@ -87,6 +87,53 @@ body {
   color: antiquewhite;
 }
 
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 80vh;
+}
+
+.diamond-image {
+  width: 300px; /* Set the desired width of the diamond */
+  height: 300px; /* Set the desired height of the diamond */
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create the diamond shape using clip-path */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); /* Set the desired box shadow properties */
+  z-index: 1; /* Ensure the diamond is behind the Typed.js output */
+}
+
+.diamond-content {
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(45deg); /* Rotate the content within the diamond */
+  overflow: hidden; /* Hide any content that overflows the diamond shape */
+  position: relative; /* Add position: relative to position the image correctly */
+}
+
+.diamond-content img {
+  position: absolute;
+  top: 50%; /* Position the image at the center of the diamond */
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-45deg); /* Rotate the image back -45 degrees to counteract the parent's rotation */
+  width: 100%; /* Set the desired width of the image */
+  height: 100%; /* Set the desired height of the image */
+  object-fit: cover;
+}
+
+/* Add styles for the Typed.js output container */
+.typed-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  z-index: 2; /* Ensure the Typed.js output is above the diamond */
+}
+
+
+
 /* Adjust media query to toggle the sidebar correctly */
 @media (max-width: 768px) {
   .navbar ul {
