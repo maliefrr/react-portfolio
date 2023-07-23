@@ -49,6 +49,11 @@ body {
   list-style: none;
 }
 
+.menu-wrapper ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu-wrapper ul li:last-child button {
   background-color: #e44309;
   color: #fff;
@@ -57,6 +62,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 0;
+}
+
+.hamburgerMenuItem {
+  text-decoration: none;
+  color: antiquewhite;
 }
 
 /* Adjust media query to toggle the sidebar correctly */

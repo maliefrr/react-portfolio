@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, } from "react";
 import { slide as Menu } from 'react-burger-menu'
 import { Twirl as Hamburger } from 'hamburger-react'
 import "../css/style.css";
@@ -20,10 +20,18 @@ const Navbar = () => {
             {/* Add the menu items */}
             <div className="menu-wrapper">
             <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Project</li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Skills</a>
+            </li>
+            <li>
+              <a href="#">Project</a>
+            </li>
             <li>
                 <button>Download CV</button>
             </li>
@@ -33,10 +41,10 @@ const Navbar = () => {
       {/* Add the menu items */}
       <Menu right isOpen={isMenuOpen} width={`100%`} customBurgerIcon={false} onClose={toggleMenu}>
         <ul className="menu">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Project</li>
+          <li><a href="#" className="hamburgerMenuItem">Home</a></li>
+          <li><a href="#" className="hamburgerMenuItem">About</a></li>
+          <li><a href="#" className="hamburgerMenuItem">Skills</a></li>
+          <li><a href="#" className="hamburgerMenuItem">Project</a></li>
           <li>
             <button>Download CV</button>
           </li>
