@@ -210,4 +210,21 @@ body {
   .menu-wrapper {
     display: none;
   }
+  .main-content {
+    flex-direction: column;
+    height: 100vw;
+  }
+  .diamond-content {
+    width: 300px;
+    height: 300px;
+    margin-top: 40%;
+  }
+  .diamond-image {
+    object-fit: cover;
+  }
+  .diamond-image img {
+    position: absolute;
+    top: 50%; /* Position the image at the center vertically */
+    left: 55%; /* Position the image at the center horizontally */
+  }
 }
