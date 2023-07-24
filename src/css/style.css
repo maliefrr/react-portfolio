@@ -3,11 +3,16 @@ body {
   color: antiquewhite;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 5vw;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   position: relative;
@@ -132,7 +137,13 @@ body {
   z-index: 2; /* Ensure the Typed.js output is above the diamond */
 }
 
+.about {
+  text-align: center;
+}
 
+h3 {
+  text-align: justify;
+}
 
 /* Adjust media query to toggle the sidebar correctly */
 @media (max-width: 768px) {
@@ -150,7 +161,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     z-index: 999;
   }
 
