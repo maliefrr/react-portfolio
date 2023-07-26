@@ -173,6 +173,33 @@ body {
   filter: grayscale(0%);
 }
 
+.project-section {
+  margin-top: 20vh;
+}
+
+.project-section h1{
+  text-align: center;
+}
+
+.project-items {
+  margin-top: 10vh;
+}
+
+.project-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-detail img{
+    height: 400px;
+    width: 300px;
+}
+
+.project-image {
+  width: 50%;
+}
+
 /* Adjust media query to toggle the sidebar correctly */
 @media (max-width: 768px) {
   .navbar ul {

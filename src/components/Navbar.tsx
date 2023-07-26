@@ -25,10 +25,10 @@ const Navbar = () => {
               <Link to="home" smooth={true} duration={500} className="hamburgerMenuItem">Home</Link>
             </li>
             <li>
-              <Link to="about" smooth={true} duration={500} className="hamburgerMenuItem">About</Link>
+              <Link to="about" smooth={true} duration={1000} className="hamburgerMenuItem">About</Link>
             </li>
             <li>
-            <Link to="skill" smooth={true} duration={500} className="hamburgerMenuItem">Skills</Link>
+            <Link to="skill" smooth={true} duration={1500} className="hamburgerMenuItem">Skills</Link>
             </li>
             <li>
               <a href="#">Project</a>
@@ -43,8 +43,8 @@ const Navbar = () => {
       <Menu right isOpen={isMenuOpen} width={`100%`} customBurgerIcon={false} onClose={toggleMenu}>
         <ul className="menu">
           <li><Link  to="home" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-          <li><Link to="about" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-          <li><Link to="skill" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Skills</Link></li>
+          <li><Link to="about" smooth={true} duration={1000} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+          <li><Link to="skill" smooth={true} duration={1500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Skills</Link></li>
           <li><a href="#" className="hamburgerMenuItem" >Project</a></li>
           <li>
             <button>Download CV</button>
