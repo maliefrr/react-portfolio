@@ -137,12 +137,18 @@ body {
   z-index: 2; /* Ensure the Typed.js output is above the diamond */
 }
 
+.about-section {
+  width: 100%;
+}
+
 .about {
   text-align: center;
 }
 
-h3 {
+.about h3 {
   text-align: justify;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 /* Adjust media query to toggle the sidebar correctly */

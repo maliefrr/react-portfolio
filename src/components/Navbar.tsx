@@ -1,6 +1,7 @@
 import { useState, } from "react";
 import { slide as Menu } from 'react-burger-menu'
 import { Twirl as Hamburger } from 'hamburger-react'
+import { Link } from "react-scroll";
 import "../css/style.css";
 
 
@@ -21,10 +22,10 @@ const Navbar = () => {
             <div className="menu-wrapper">
             <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="home" smooth={true} duration={500} className="hamburgerMenuItem">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="about" smooth={true} duration={500} className="hamburgerMenuItem">About</Link>
             </li>
             <li>
               <a href="#">Skills</a>
@@ -41,8 +42,8 @@ const Navbar = () => {
       {/* Add the menu items */}
       <Menu right isOpen={isMenuOpen} width={`100%`} customBurgerIcon={false} onClose={toggleMenu}>
         <ul className="menu">
-          <li><a href="#" className="hamburgerMenuItem">Home</a></li>
-          <li><a href="#" className="hamburgerMenuItem">About</a></li>
+          <li><Link  to="home" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+          <li><Link to="about" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>About</Link></li>
           <li><a href="#" className="hamburgerMenuItem">Skills</a></li>
           <li><a href="#" className="hamburgerMenuItem">Project</a></li>
           <li>

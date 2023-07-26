@@ -35,7 +35,7 @@ const HeroSection = () => {
     }, []);
   return (
     <>
-        <div className="main-content">
+        <div className="main-content" id="home">
             <div className="diamond-image">
                 <div className="diamond-content">
                     <img src="/image/profile_picture.jpeg" alt="Profile Picture" />
