@@ -151,6 +151,28 @@ body {
   padding-right: 10vw;
 }
 
+.skill-section h1 {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.mySkill {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+}
+
+.mySkill img {
+  height: 200px;
+  width: 200px;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in;
+}
+
+.mySkill img:hover {
+  filter: grayscale(0%);
+}
+
 /* Adjust media query to toggle the sidebar correctly */
 @media (max-width: 768px) {
   .navbar ul {
