@@ -15,7 +15,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <About />
-      <div className="skill-section">
+      <div className="skill-section" id="skill">
           <h1>My Skill</h1>
           <div className="mySkill">
             <img src="/image/node.png" alt="" />

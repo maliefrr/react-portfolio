@@ -266,4 +266,13 @@ body {
     top: 50%; /* Position the image at the center vertically */
     left: 55%; /* Position the image at the center horizontally */
   }
+  .mySkill {
+    flex-direction: column;
+    margin-left: 35vw;
+  }
+  .mySkill img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+  }
 }
