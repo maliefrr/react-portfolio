@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link to="skill" smooth={true} duration={1500} className="hamburgerMenuItem">Skills</Link>
             </li>
             <li>
-              <a href="#">Project</a>
+            <Link to="projects" smooth={true} duration={1500} className="hamburgerMenuItem">Project</Link>
             </li>
             <li>
                 <button>Download CV</button>
@@ -45,7 +45,7 @@ const Navbar = () => {
           <li><Link  to="home" smooth={true} duration={500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
           <li><Link to="about" smooth={true} duration={1000} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>About</Link></li>
           <li><Link to="skill" smooth={true} duration={1500} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Skills</Link></li>
-          <li><a href="#" className="hamburgerMenuItem" >Project</a></li>
+          <li><Link to="projects" smooth={true} duration={2000} className="hamburgerMenuItem" onClick={() => setIsMenuOpen(false)}>Project</Link></li>
           <li>
             <button>Download CV</button>
           </li>

@@ -58,6 +58,7 @@ body {
   text-decoration: none;
   color: inherit;
   position: relative; /* Added to enable positioning of the ::before pseudo-element */
+  cursor: pointer;
 }
 
 /* Create the line before the link text */
@@ -145,7 +146,7 @@ body {
   text-align: center;
 }
 
-.about h3 {
+.about-section p {
   text-align: justify;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -184,16 +185,22 @@ body {
 .project-items {
   margin-top: 10vh;
 }
+.project-items h3 {
+  text-align: center;
+}
 
 .project-detail {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: justify;
 }
+
 
 .project-detail img{
     height: 400px;
     width: 300px;
+    margin-left: 30px;
 }
 
 .project-image {
@@ -292,6 +299,10 @@ body {
     position: absolute;
     top: 50%; /* Position the image at the center vertically */
     left: 55%; /* Position the image at the center horizontally */
+  }
+
+  .about-section p {
+    padding-left: 20vw;
   }
   .mySkill {
     flex-direction: column;

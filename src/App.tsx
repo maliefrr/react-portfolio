@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import "./css/style.css";
 import About from "./components/About";
+import Project from "./components/Project";
 
 
 
@@ -21,19 +22,13 @@ const App = () => {
             <img src="/image/node.png" alt="" />
             <img src="/image/js.png" alt="" />
             <img src="/image/react.png" alt="" />
+            <img src="/image/mysql.png" alt="" />
+            <img src="/image/mongodb.png" alt="" />
           </div>
       </div>
-      <div className="project-section">
+      <div className="project-section" id="projects">
         <h1>My Project</h1>
-        <div className="project-items">
-          <h3>E-KTM</h3>
-              <div className="project-detail">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem rerum earum eligendi quidem veniam placeat. Esse accusantium quae odit facere, suscipit officiis vitae harum consectetur reiciendis alias reprehenderit incidunt obcaecati, pariatur praesentium quo totam nesciunt nobis ex distinctio eaque officia sint iusto. Adipisci possimus itaque impedit, esse aliquam minima eos quisquam. Aut cum sunt quas, neque optio debitis tempore ad sint, molestias dolor officiis eos incidunt exercitationem consequatur. Eum a dolorem aperiam iste. Cumque, tenetur veniam hic quaerat nisi sed quae voluptatum laudantium dolorem eum commodi nostrum aliquid vel. Id, maxime! Hic illum id corrupti. Qui minima nostrum, exercitationem consequatur et deleniti pariatur doloribus sequi totam beatae ut incidunt, rem repellendus voluptates corporis? Dolor magni minima placeat delectus accusantium minus quae id neque architecto adipisci expedita ullam recusandae repellendus illo, odit error maxime ad voluptates saepe repellat alias vel? Assumenda esse deserunt velit incidunt qui accusamus quae ab ex eum?</p>
-                <div className="project-image">
-                  <img src="/image/ektm.gif" alt="" />
-                </div>
-              </div>
-        </div>
+        <Project title="E-KTM" desc="Proyek sistem e-KTM adalah sebuah inisiatif pribadi saya yang bertujuan untuk menggantikan penggunaan kartu mahasiswa fisik dengan versi digital yang dikenal sebagai e-KTM. Saya ingin menciptakan sebuah platform yang memungkinkan mahasiswa mengakses identitas mereka dengan mudah melalui perangkat elektronik seperti smartphone atau tablet.Dalam proyek ini, fokus utama saya adalah pada kenyamanan dan efisiensi dalam pengelolaan identitas mahasiswa. Saya merancang dan mengembangkan sebuah prototype sistem informasi akademik yang terpisah dan API yang mendukung fungsionalitas e-KTM. Dengan menggunakan API ini, aplikasi e-KTM yang saya kembangkan akan dapat memperbarui informasi dan pengumuman yang ada di halaman website prodi Ilmu Komputer secara otomatis melalui data scraping.Saya memahami bahwa keamanan dan privasi data bukan menjadi fokus utama proyek ini. Namun, saya tetap berupaya untuk melindungi data yang diperoleh melalui data scraping dengan mematuhi aturan dan regulasi yang berlaku.Dalam proyek ini, saya bekerja secara mandiri dan menggabungkan keahlian teknis saya dalam pengembangan aplikasi dan data scraping. Saya menyadari bahwa integrasi dengan sistem informasi akademik kampus memerlukan izin dan kerjasama lebih lanjut, sehingga saat ini fokus saya adalah pada pembuatan prototipe dan pengembangan fungsionalitas dasar aplikasi e-KTM.Saya percaya bahwa sistem e-KTM yang saya kembangkan dapat membawa manfaat dalam meningkatkan aksesibilitas dan efisiensi pengelolaan identitas mahasiswa. Melalui proyek ini, saya berkomitmen untuk terus mengembangkan dan meningkatkan fungsionalitas aplikasi e-KTM." image="/image/ektm.gif"/>
       </div>
     </div>
     </>
