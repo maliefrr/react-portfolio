@@ -11,12 +11,12 @@ export default defineConfig({
       strict: false,
     },
     // Optionally, if you encounter any issues with image MIME types, you can set them as well
-    proxy: {
-       '/image': {
-         target: '/react-portfolio/image',
-         changeOrigin: true,
-         rewrite: (path) => path.replace(/^\/image/, ''),
-       },
-     },
+    // proxy: {
+    //   '/image': {
+    //     target: '/your-repo-name/image',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/image/, ''),
+    //   },
+    // },
   },
 });
