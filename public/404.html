@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <script>
+      const url = new URL(window.location);
+      url.pathname = "/"; // Redirect to the root index.html
+      window.location.replace(url.toString());
+    </script>
+  </body>
+</html>
