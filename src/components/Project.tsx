@@ -10,11 +10,11 @@ interface projectProps {
 const Project : React.FC<projectProps> = ({title,desc,image}) => {
   return (
     <div className="project-items">
-      <h3>{title}</h3>
-          <div className="project-detail">
+      <h3 data-aos="fade-up">{title}</h3>
+          <div className="project-detail"  data-aos="fade-up-left">
             <p>{desc}</p>
             <div className="project-image">
-              <img src={image} alt="" />
+              <img src={image} alt=""  data-aos="fade-up-right"/>
             </div>
           </div>
     </div>
