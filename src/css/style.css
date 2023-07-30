@@ -196,15 +196,64 @@ body {
   text-align: justify;
 }
 
-
-.project-detail img{
-    height: 400px;
-    width: 300px;
-    margin-left: 30px;
-}
-
 .project-image {
   width: 50%;
+  margin-left: 30px;
+}
+
+/* style.css */
+
+.footer-jumbotron {
+  margin-top: 5vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer-jumbotron-content {
+  max-width: 600px;
+}
+
+.footer-jumbotron h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.footer-jumbotron p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+.contact-details {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+.contact-details p a img {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+  transition: 0.5s ease-in;
+
+}
+.contact-details p a img:hover {
+  filter: grayscale(0%);
+}
+
+/* Add any other styles you need for your Footer Jumbotron */
+
+
+.project-image img:first-child {
+  height: 300px;
 }
 
 /* Adjust media query to toggle the sidebar correctly */
