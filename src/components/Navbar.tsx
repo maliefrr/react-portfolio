@@ -1,16 +1,42 @@
-import { useState, } from "react";
-import { slide as Menu } from 'react-burger-menu'
-import { Twirl as Hamburger } from 'hamburger-react'
+/* eslint-disable @typescript-eslint/no-misused-promises */
+import React, { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
+import { Twirl as Hamburger } from "hamburger-react";
 import { Link } from "react-scroll";
+import Swal from "sweetalert2"; // Import SweetAlert
+
 import "../css/style.css";
 
-
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDownloadCV = async () => {
+    try {
+      // Show SweetAlert popup with options for English and Indonesian resumes
+      const result = await Swal.fire({
+        title: "Download CV",
+        showCancelButton: true,
+        confirmButtonText: "English",
+        cancelButtonText: "Indonesia",
+      });
+  
+      if (result.isConfirmed) {
+        // User chose English resume
+        window.open("/resume_english.pdf", "_blank");
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // User chose Indonesian resume
+        window.open("/resume.pdf", "_blank");
+      }
+    } catch (error) {
+      // Handle any errors that occur during the SweetAlert operation
+      console.error("Error occurred:", error);
+    }
+  };
+  
   return (
     <>
       <nav className="navbar">
@@ -34,7 +60,7 @@ const Navbar = () => {
             <Link to="projects" smooth={true} duration={1500} className="hamburgerMenuItem">Project</Link>
             </li>
             <li>
-                <button>Download CV</button>
+                <button onClick={handleDownloadCV}>Download CV</button>
             </li>
             </ul>
             </div>
