@@ -24,7 +24,7 @@ const App = () => {
           <h1 data-aos="fade-up">My Skill</h1>
           <div className="mySkill">
             {/* Add data-aos attribute to each image */}
-            <img src="./image/node.png" alt="" data-aos="fade-up" />
+            <img src="./image/node.png" alt="" data-aos="fade-up"/>
             <img src="./image/js.png" alt="" data-aos="fade-up" />
             <img src="./image/react.png" alt="" data-aos="fade-up" />
             <img src="./image/mysql.png" alt="" data-aos="fade-up" />
