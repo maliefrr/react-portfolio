@@ -26,10 +26,10 @@ const Navbar = () => {
   
       if (result.isConfirmed) {
         // User chose English resume
-        window.open("/resume_english.pdf", "_blank");
+        window.open("./resume_english.pdf", "_blank");
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         // User chose Indonesian resume
-        window.open("/resume.pdf", "_blank");
+        window.open("./resume.pdf", "_blank");
       }
     } catch (error) {
       // Handle any errors that occur during the SweetAlert operation
