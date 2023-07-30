@@ -45,7 +45,7 @@ const HeroSection = () => {
       <div className="main-content" id="home">
         <div className="diamond-image">
           <div className="diamond-content">
-            <img src="/image/profile_picture.jpeg" alt="Profile Picture" />
+            <img src="./image/profile_picture.jpeg" alt="Profile Picture" />
           </div>
         </div>
         {/* Typed.js Output */}
