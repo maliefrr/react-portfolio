@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { Twirl as Hamburger } from "hamburger-react";
@@ -13,28 +14,29 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-const handleDownloadCV = async () => {
-  try {
-    // Show SweetAlert popup with options for English and Indonesian resumes
-    const result = await Swal.fire({
-      title: "Download CV",
-      showCancelButton: true,
-      confirmButtonText: "English",
-      cancelButtonText: "Indonesia",
-    });
-
-    if (result.isConfirmed) {
-      // User chose English resume
-      window.open("./resume_english.pdf", "_blank");
-    } else if (result.dismiss === Swal.DismissReason.cancel) {
-      // User chose Indonesian resume
-      window.open("./resume.pdf", "_blank");
+  const handleDownloadCV = async () => {
+    try {
+      // Show SweetAlert popup with options for English and Indonesian resumes
+      const result = await Swal.fire({
+        title: "Download CV",
+        showCancelButton: true,
+        confirmButtonText: "English",
+        cancelButtonText: "Indonesia",
+      });
+  
+      if (result.isConfirmed) {
+        // User chose English resume
+        window.open("/resume_english.pdf", "_blank");
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // User chose Indonesian resume
+        window.open("/resume.pdf", "_blank");
+      }
+    } catch (error) {
+      // Handle any errors that occur during the SweetAlert operation
+      console.error("Error occurred:", error);
     }
-  } catch (error) {
-    // Handle any errors that occur during the SweetAlert operation
-    console.error("Error occurred:", error);
-  }
-};
+  };
+  
   return (
     <>
       <nav className="navbar">
